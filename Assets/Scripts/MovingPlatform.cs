@@ -5,23 +5,16 @@ using UnityEngine;
 public class MovingPlatform : MonoBehaviour
 {
     public GameObject waypointsParent;
+    public List<Transform> gameObjects;
 
     public float speed;
 
     private float currentDistance; // от 0 до 1
     private int currentWaypoint;
     private Vector3 dir;
-    private List<Transform> gameObjects;
 
     void Start()
     {
-        gameObjects = new List<Transform>();
-        waypointsParent.GetComponentsInChildren<Transform>(gameObjects);
-
-        gameObjects.Remove(waypointsParent.transform);
-
-        //Debug.Log(gameObjects.Count);
-
         currentWaypoint = 0;
         currentDistance = 0.0f;
     }
