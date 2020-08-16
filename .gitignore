@@ -5,3 +5,5 @@
 /[Tt]emp/
 /*.csproj
 *.sln
+*.vscode
+*.csproj
