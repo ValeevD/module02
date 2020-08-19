@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public GameObject waypointsParent;
+    //public GameObject waypointsParent;
     public List<Transform> gameObjects;
 
     public float speed;
@@ -23,6 +23,7 @@ public class MovingPlatform : MonoBehaviour
     void Update()
     {
         currentDistance += speed * Time.deltaTime;
+
         if(currentDistance > 1.0f)
         {
             currentWaypoint = (currentWaypoint + 1) % gameObjects.Count;

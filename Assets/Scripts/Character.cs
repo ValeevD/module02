@@ -54,9 +54,9 @@ public class Character : MonoBehaviour
 
         float velocity = rigidBody2D.velocity.x;
 
-        if (velocity < -0.01f) {
+        if (velocity < -0.05f) {
             visualDirection = -1.0f;
-        } else if (velocity > 0.01f) {
+        } else if (velocity > 0.05f) {
             visualDirection = 1.0f;
         }
 
